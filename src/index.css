@@ -1,0 +1,100 @@
+:root {
+  --text: #606060;
+  --text-h: #0f0f0f;
+  --bg: #fff;
+  --bg-elevated: #f9f9f9;
+  --border: #e5e5e5;
+  --code-bg: #f2f2f2;
+  --accent: #ff0000;
+  --accent-hover: #cc0000;
+  --accent-bg: rgba(255, 0, 0, 0.08);
+  --accent-border: rgba(255, 0, 0, 0.4);
+  --social-bg: rgba(242, 242, 242, 0.8);
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+  --sans: 'Roboto', system-ui, 'Segoe UI', Arial, sans-serif;
+  --heading: 'Roboto', system-ui, 'Segoe UI', Arial, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 16px/145% var(--sans);
+  letter-spacing: 0.1px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #aaaaaa;
+    --text-h: #f1f1f1;
+    --bg: #0f0f0f;
+    --bg-elevated: #212121;
+    --border: #303030;
+    --code-bg: #1c1c1c;
+    --accent: #ff0000;
+    --accent-hover: #ff4d4d;
+    --accent-bg: rgba(255, 0, 0, 0.15);
+    --accent-border: rgba(255, 0, 0, 0.5);
+    --social-bg: rgba(33, 33, 33, 0.8);
+    --shadow:
+      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  max-width: 1126px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: 32px;
+  letter-spacing: -0.5px;
+  margin: 0;
+  @media (max-width: 1024px) {
+    font-size: 26px;
+  }
+}
+h2 {
+  font-size: 22px;
+  line-height: 118%;
+  letter-spacing: -0.2px;
+  margin: 0 0 8px;
+  @media (max-width: 1024px) {
+    font-size: 19px;
+  }
+}
+p {
+  margin: 0;
+}
+
+code {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text-h);
+  font-size: 14px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
+}
